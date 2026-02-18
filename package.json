@@ -1,4 +1,3 @@
-
 {
   "name": "golden-pearl-sales-connect",
   "private": true,
@@ -10,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google/genai": "latest",
+    "@google/genai": "^0.2.1",
     "html2pdf.js": "^0.10.1",
     "idb-keyval": "^6.2.1",
     "react": "^18.2.0",
