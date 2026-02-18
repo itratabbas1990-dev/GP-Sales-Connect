@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Pearl Sales Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                50: '#fbf8eb',
+                100: '#f5edd1',
+                200: '#ecdaaa',
+                300: '#e1c178',
+                400: '#d7a94f',
+                500: '#d09032', // Golden Pearl Primary
+                600: '#b47226',
+                700: '#905622',
+                800: '#764522',
+                900: '#613920',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "xlsx": "https://esm.sh/xlsx@0.18.5",
+    "html2pdf.js": "https://esm.sh/html2pdf.js@0.10.1?bundle",
+    "idb-keyval": "https://esm.sh/idb-keyval@6.2.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-50 text-gray-900 antialiased">
+    <div id="root"></div>
+  </body>
+</html>

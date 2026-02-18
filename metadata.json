@@ -1,0 +1,9 @@
+{
+  "name": "Golden Pearl Sales Connect",
+  "description": "Professional market visit reporting and presentation tool for Area Sales Managers at Golden Pearl Cosmetics.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
