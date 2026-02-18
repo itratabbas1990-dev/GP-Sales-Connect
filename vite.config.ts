@@ -40,7 +40,9 @@ export default defineConfig(({ mode }) => {
         },
         workbox: {
           // Increase limit for caching photos taken
-          maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+          maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
+          cleanupOutdatedCaches: true,
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,json}']
         }
       })
     ],
