@@ -11,6 +11,8 @@ export default defineConfig(({ mode }) => {
   const apiKey = env.API_KEY || process.env.API_KEY;
 
   return {
+    // CRITICAL: base: './' ensures the app works when opened from a file or in a WebView (AppGeyser)
+    base: './', 
     plugins: [
       react(),
       VitePWA({
@@ -24,22 +26,21 @@ export default defineConfig(({ mode }) => {
           background_color: '#ffffff',
           display: 'standalone',
           orientation: 'portrait',
-          start_url: '/',
+          start_url: './index.html', // Updated for relative path
           icons: [
             {
-              src: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png', // Placeholder Gold Icon
+              src: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png', 
               sizes: '192x192',
               type: 'image/png'
             },
             {
-              src: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png', // Placeholder Gold Icon
+              src: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png', 
               sizes: '512x512',
               type: 'image/png'
             }
           ]
         },
         workbox: {
-          // Increase limit for caching photos taken
           maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
           cleanupOutdatedCaches: true,
           globPatterns: ['**/*.{js,css,html,ico,png,svg,json}']
@@ -48,6 +49,10 @@ export default defineConfig(({ mode }) => {
     ],
     define: {
       'process.env.API_KEY': JSON.stringify(apiKey)
+    },
+    build: {
+      outDir: 'dist',
+      emptyOutDir: true,
     }
   };
 });
